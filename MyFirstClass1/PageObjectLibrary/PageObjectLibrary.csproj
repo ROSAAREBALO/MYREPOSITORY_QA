@@ -5,11 +5,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{26E38C05-2CE0-4F19-8642-77CBB6BC75C8}</ProjectGuid>
+    <ProjectGuid>{C9172B09-227D-4C5A-B453-555C5055C99C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MyFirstClass1</RootNamespace>
-    <AssemblyName>MyFirstClass1</AssemblyName>
+    <RootNamespace>PageObjectLibrary</RootNamespace>
+    <AssemblyName>PageObjectLibrary</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -58,16 +58,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="PageObject\AutomationPractice\ContactUs\ContactUsPage.cs" />
+    <Compile Include="PageObject\AutomationPractice\Menu\MenuPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Steps\AutomationPractice\Navigation\NavigationSteps.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Steps\AutomationPractice\ContactUs\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\PageObjectLibrary\PageObjectLibrary.csproj">
-      <Project>{C9172B09-227D-4C5A-B453-555C5055C99C}</Project>
-      <Name>PageObjectLibrary</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
